@@ -115,8 +115,7 @@ Page({
     foods: [],
     filteredFoods: [],
     cart: [],
-    cartCount: 0,
-    cartIconSrc: ''
+    cartCount: 0
   },
 
   onLoad() {
@@ -124,8 +123,6 @@ Page({
     this.filterFoods('all');
     // 从本地存储加载购物车
     this.loadCart();
-    // 处理云文件ID为临时URL，避免他人设备无法直接展示
-    this.resolveCloudImage();
   },
 
   onShow() {
@@ -134,23 +131,6 @@ Page({
     this.filterFoods(this.data.currentCategory);
     // 从本地存储同步购物车数量，避免返回菜单后角标未更新
     this.loadCart();
-    this.resolveCloudImage();
-  },
-
-  // 将 fileID 转换为可访问的临时 URL
-  resolveCloudImage() {
-    const fileID = 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/icon/cart.png';
-    if (!wx.cloud) return;
-    wx.cloud.getTempFileURL({
-      fileList: [fileID],
-      success: (res) => {
-        const url = res.fileList && res.fileList[0] && res.fileList[0].tempFileURL;
-        if (url) this.setData({ cartIconSrc: url });
-      },
-      fail: (e) => {
-        console.error('获取临时URL失败', e);
-      }
-    });
   },
 
   // 加载菜品数据（合并默认和自定义）

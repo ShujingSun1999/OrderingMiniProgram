@@ -4,12 +4,24 @@ Page({
     orders: []
   },
 
+  // 手动刷新
+  refreshOrders() {
+    wx.showLoading({ title: '刷新中', mask: true });
+    this.loadOrders();
+    setTimeout(() => wx.hideLoading(), 1000);
+  },
+
   onLoad() {
     this.loadOrders();
   },
 
   onShow() {
     this.loadOrders();
+  },
+
+  onPullDownRefresh() {
+    this.loadOrders();
+    setTimeout(() => wx.stopPullDownRefresh(), 600);
   },
 
   // 加载订单
@@ -44,13 +56,20 @@ Page({
     const orders = wx.getStorageSync('orders') || [];
     const idx = orders.findIndex(o => o.id === id);
     if (idx !== -1) {
-      orders[idx].status = orders[idx].status === 'pending' ? 'completed' : 'pending';
+      const newStatus = orders[idx].status === 'pending' ? 'completed' : 'pending';
+      orders[idx].status = newStatus;
+      // 本地更新
       wx.setStorageSync('orders', orders);
       this.setData({ orders });
-      wx.showToast({
-        title: orders[idx].status === 'completed' ? '烹饪完成！' : '烹饪中...',
-        icon: 'success'
-      });
+      // 云端更新
+      try {
+        const db = wx.cloud.database();
+        db.collection('orders').where({ id }).update({
+          data: { status: newStatus }
+        }).then(() => {
+          this.loadOrders();
+        }).catch(err => console.error('云端更新失败', err));
+      } catch (e) { console.error('未初始化云环境', e); }
     }
   },
 
