@@ -87,9 +87,30 @@ Page({
         id: 11,
         name: '糖醋小排',
         description: '糖醋小排味道好极了！',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/避风塘虾.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'cook'
-      }
+      },
+      {
+        id: 12,
+        name: '披萨',
+        description: '备注想吃什么口味的披萨哦',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        category: 'main'
+      },
+      {
+        id: 13,
+        name: '芥末虾球',
+        description: '清爽的虾球',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        category: 'cook'
+      },
+      {
+        id: 14,
+        name: '清炒土豆丝',
+        description: '小宝爱吃，我就多做！',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        category: 'main'
+      },
     ],
     foods: [],
     filteredFoods: [],

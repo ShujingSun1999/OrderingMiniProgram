@@ -1,8 +1,8 @@
 /* pages/food-manage/index.wxss */
 /* 添加可爱字体样式 */
 .container {
-  padding: 20rpx;
-  background-color: #fff5f5;
+  padding: 16rpx;
+  background-color: #f5f5f5;
   min-height: 100vh;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
@@ -14,71 +14,73 @@
 .title {
   font-size: 36rpx;
   font-weight: bold;
-  color: #ff6b8b;
+  color: #333;
   text-align: center;
-  text-shadow: 2rpx 2rpx 4rpx rgba(255, 107, 139, 0.2);
 }
 
 .add-form {
   background-color: #fff;
-  border-radius: 24rpx;
-  padding: 30rpx;
-  margin-bottom: 30rpx;
-  box-shadow: 0 8rpx 30rpx rgba(255, 107, 139, 0.15);
-  border: 2rpx solid #ffe6eb;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
+  /* 视口贴边：左右各 22rpx 安全间距 */
+  width: calc(100vw - 44rpx);
+  margin-left: calc((100vw - 100%) / -2 + 22rpx);
+  margin-right: calc((100vw - 100%) / -2 + 22rpx);
+  box-sizing: border-box;
 }
 
 .form-title {
   font-size: 32rpx;
   font-weight: bold;
-  color: #ff6b8b;
-  margin-bottom: 25rpx;
+  color: #333;
+  margin-bottom: 20rpx;
   text-align: center;
-  text-shadow: 2rpx 2rpx 4rpx rgba(255, 107, 139, 0.2);
 }
 
 .form-group {
-  margin-bottom: 25rpx;
+  margin-bottom: 20rpx;
 }
 
 .form-label {
   font-size: 28rpx;
-  color: #ff6b8b;
+  color: #666;
   margin-bottom: 12rpx;
   font-weight: 500;
 }
 
 .form-input {
-  border: 2rpx solid #ffe6eb;
-  border-radius: 16rpx;
-  padding: 20rpx;
-  font-size: 28rpx;
-  background-color: #fffafb;
+  border: 2rpx solid #eee;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  font-size: 26rpx;
+  background-color: #f7f7f7;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .form-picker {
-  border: 2rpx solid #ffe6eb;
-  border-radius: 16rpx;
-  padding: 20rpx;
-  background-color: #fffafb;
+  border: 2rpx solid #eee;
+  border-radius: 12rpx;
+  padding: 16rpx;
+  background-color: #f7f7f7;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .picker-value {
   font-size: 28rpx;
-  color: #ff6b8b;
+  color: #333;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .image-upload {
-  border: 2rpx dashed #ffc2d1;
-  border-radius: 16rpx;
+  border: 2rpx dashed #ddd;
+  border-radius: 12rpx;
   height: 200rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fffafb;
+  background-color: #f7f7f7;
 }
 
 .preview-image {
@@ -103,45 +105,48 @@
 
 .upload-text {
   font-size: 24rpx;
-  color: #ff6b8b;
+  color: #999;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, #ff6b8b, #ff8fa3);
-  color: white;
+  background-color: #ff6b6b;
+  color: #fff;
   border-radius: 50rpx;
-  padding: 25rpx;
+  padding: 18rpx 28rpx;
   font-size: 28rpx;
   font-weight: bold;
   border: none;
-  margin-top: 20rpx;
-  box-shadow: 0 4rpx 15rpx rgba(255, 107, 139, 0.3);
+  margin-top: 16rpx;
+  box-shadow: 0 4rpx 15rpx rgba(0, 0, 0, 0.08);
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .food-list {
   background-color: #fff;
-  border-radius: 24rpx;
-  padding: 30rpx;
-  box-shadow: 0 8rpx 30rpx rgba(255, 107, 139, 0.15);
-  border: 2rpx solid #ffe6eb;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
+  /* 与添加卡片同宽：左右各 22rpx 安全间距 */
+  width: calc(100vw - 44rpx);
+  margin-left: calc((100vw - 100%) / -2 + 22rpx);
+  margin-right: calc((100vw - 100%) / -2 + 22rpx);
+  box-sizing: border-box;
 }
 
 .list-title {
   font-size: 32rpx;
   font-weight: bold;
-  color: #ff6b8b;
-  margin-bottom: 25rpx;
-  text-shadow: 2rpx 2rpx 4rpx rgba(255, 107, 139, 0.2);
+  color: #333;
+  margin-bottom: 20rpx;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .food-item {
   display: flex;
   align-items: center;
-  padding: 25rpx 0;
-  border-bottom: 2rpx solid #ffe6eb;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eee;
 }
 
 .food-item:last-child {
@@ -163,22 +168,22 @@
 .food-name {
   font-size: 30rpx;
   font-weight: bold;
-  color: #ff6b8b;
+  color: #333;
   margin-bottom: 8rpx;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .food-desc {
   font-size: 24rpx;
-  color: #ff8fa3;
+  color: #999;
   margin-bottom: 8rpx;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .food-category {
   font-size: 22rpx;
-  color: #ff6b8b;
-  background-color: #ffe6eb;
+  color: #ff6b6b;
+  background-color: #fff0f0;
   padding: 6rpx 16rpx;
   border-radius: 20rpx;
   display: inline-block;
@@ -186,23 +191,22 @@
 }
 
 .delete-btn {
-  background-color: #ff8fa3;
+  background-color: #ff6b6b;
   color: white;
   border-radius: 20rpx;
   padding: 12rpx 20rpx;
   font-size: 24rpx;
   border: none;
-  box-shadow: 0 2rpx 10rpx rgba(255, 143, 163, 0.3);
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.08);
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .empty-list {
   background-color: #fff;
-  border-radius: 24rpx;
-  padding: 60rpx 30rpx;
+  border-radius: 16rpx;
+  padding: 40rpx 24rpx;
   text-align: center;
-  box-shadow: 0 8rpx 30rpx rgba(255, 107, 139, 0.15);
-  border: 2rpx solid #ffe6eb;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
 }
 
 .empty-icon {
@@ -214,6 +218,6 @@
 
 .empty-text {
   font-size: 28rpx;
-  color: #ff8fa3;
+  color: #999;
   font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
