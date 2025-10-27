@@ -74,7 +74,13 @@
   "compileType": "miniprogram",
   "srcMiniprogramRoot": "miniprogram/",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      { "type": "file", "value": "miniprogram/images/default-goods-image.png" },
+      { "type": "glob", "value": "miniprogram/images/foods/*.png" },
+      { "type": "glob", "value": "miniprogram/images/create_*.png" },
+      { "type": "glob", "value": "miniprogram/images/*env*.png" },
+      { "type": "file", "value": "miniprogram/images/scf-enter.png" }
+    ],
     "include": []
   },
   "editorSetting": {
