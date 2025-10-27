@@ -14,42 +14,42 @@ Page({
         id: 1,
         name: '番茄鸡蛋打卤面',
         description: '番茄鸡蛋加上黑木耳，面条劲道',
-        image: '../../images/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'main'
       },
       {
         id: 2,
         name: '鸡汤',
         description: '冷冷的冬天来一碗热热的鸡汤',
-        image: '../../images/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'main'
       },
       {
         id: 3,
         name: '奶茶',
         description: '无糖乌龙茶配上鲜奶',
-        image: '../../images/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'drink'
       },
       {
         id: 4,
         name: '抹茶拿铁',
         description: '日式抹茶，香醇拿铁',
-        image: '../../images/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'drink'
       },
       {
         id: 5,
         name: '提拉米苏',
         description: '意大利经典甜品',
-        image: '../../images/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'dessert'
       },
       {
         id: 6,
         name: '炸鸡柳',
         description: '外酥里嫩，就一个字香！',
-        image: '../../images/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'snack'
       }
     ],

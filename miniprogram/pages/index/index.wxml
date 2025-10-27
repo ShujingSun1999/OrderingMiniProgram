@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image class="top-banner" src="../../images/home-banner.png" mode="widthFix" lazy-load="true"></image>
+  <image class="top-banner" src="cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/home-banner.png" mode="widthFix" lazy-load="true"></image>
  <!--  <view class="header">
     <view class="title">囡囡专用御膳房</view>
   </view>-->
