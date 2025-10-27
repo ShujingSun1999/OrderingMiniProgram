@@ -2,11 +2,13 @@
 Page({
   data: {
     categories: [
-      { id: 'all', name: '全部' },
       { id: 'main', name: '主食' },
+      { id: 'cook', name: '炒菜' },
       { id: 'drink', name: '饮品' },
       { id: 'dessert', name: '甜点' },
-      { id: 'snack', name: '小吃' }
+      { id: 'snack', name: '小吃' },
+      { id: 'breakfast', name: '早餐' },
+      { id: 'all', name: '全部' }
     ],
     currentCategory: 'all',
     defaultFoods: [
@@ -14,7 +16,7 @@ Page({
         id: 1,
         name: '番茄鸡蛋打卤面',
         description: '番茄鸡蛋加上黑木耳，面条劲道',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/番茄鸡蛋打卤面.png',
         category: 'main'
       },
       {
