@@ -20,12 +20,28 @@ Page({
     });
   },
 
+  // 切换订单状态：pending <-> completed
+  toggleStatus(e) {
+    const id = e.currentTarget.dataset.id;
+    const orders = wx.getStorageSync('orders') || [];
+    const idx = orders.findIndex(o => o.id === id);
+    if (idx !== -1) {
+      orders[idx].status = orders[idx].status === 'pending' ? 'completed' : 'pending';
+      wx.setStorageSync('orders', orders);
+      this.setData({ orders });
+      wx.showToast({
+        title: orders[idx].status === 'completed' ? '烹饪完成！' : '烹饪中...',
+        icon: 'success'
+      });
+    }
+  },
+
   // 分享单个订单（无价格版本）
   shareOrder(e) {
     const order = e.currentTarget.dataset.order;
     
     // 构建分享内容（不含价格）
-    let shareText = `💖 亲爱的点餐清单 💖\n`;
+    let shareText = `💖 囡囡的点餐清单 💖\n`;
     shareText += `----------------\n`;
     
     order.items.forEach(item => {
@@ -34,11 +50,11 @@ Page({
     
     shareText += `----------------\n`;
     shareText += `下单时间: ${order.createTime}\n`;
-    shareText += `订单号: ${order.id}`;
     
+    const modalContent = shareText.replace(/\n/g, '\r\n'); // 兼容不同平台换行
     wx.showModal({
       title: '分享点餐清单',
-      content: shareText,
+      content: modalContent,
       showCancel: true,
       cancelText: '取消',
       confirmText: '复制内容',

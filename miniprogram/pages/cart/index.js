@@ -71,16 +71,18 @@ Page({
       return;
     }
     
-    // 创建订单
+    // 创建订单（订单号从1开始自增）
+    const orders = wx.getStorageSync('orders') || [];
+    const nextId = orders.length > 0 ? Math.max(...orders.map(o => Number(o.seq || 0))) + 1 : 1;
     const order = {
       id: Date.now(),
+      seq: nextId, // 序号从1开始
       items: this.data.cart,
       status: 'pending',
       createTime: new Date().toLocaleString()
     };
     
     // 保存订单
-    const orders = wx.getStorageSync('orders') || [];
     orders.unshift(order);
     wx.setStorageSync('orders', orders);
     

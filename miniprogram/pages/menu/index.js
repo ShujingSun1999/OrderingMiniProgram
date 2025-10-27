@@ -38,7 +38,7 @@ Page({
         id: 4,
         name: '抹茶拿铁',
         description: '日式抹茶，香醇拿铁',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/抹茶拿铁.png',
         category: 'drink'
       },
       {
@@ -80,7 +80,14 @@ Page({
         id: 10,
         name: '避风塘虾',
         description: '阿根廷红虾配上蒜香的面包糠，甜甜咸咸美滋味',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/避风塘虾.png',
+        category: 'cook'
+      },
+      {
+        id: 11,
+        name: '糖醋小排',
+        description: '糖醋小排味道好极了！',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/避风塘虾.png',
         category: 'cook'
       }
     ],
