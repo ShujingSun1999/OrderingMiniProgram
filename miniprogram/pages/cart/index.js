@@ -96,6 +96,24 @@ Page({
     // 保存订单
     orders.unshift(order);
     wx.setStorageSync('orders', orders);
+
+    // 同步到云数据库，便于双方查看
+    try {
+      const db = wx.cloud.database();
+      db.collection('orders').add({
+        data: {
+          id: order.id,
+          seq: order.seq,
+          items: order.items,
+          status: order.status,
+          remark: order.remark,
+          createTime: order.createTime,
+          createTimeTs: Date.now()
+        }
+      });
+    } catch (e) {
+      console.error('上传云端失败', e);
+    }
     
     // 清空购物车与备注
     wx.setStorageSync('cart', []);

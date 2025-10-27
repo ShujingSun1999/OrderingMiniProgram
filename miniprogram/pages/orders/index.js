@@ -14,10 +14,28 @@ Page({
 
   // 加载订单
   loadOrders() {
-    const orders = wx.getStorageSync('orders') || [];
-    this.setData({
-      orders: orders
-    });
+    const localOrders = wx.getStorageSync('orders') || [];
+    this.setData({ orders: localOrders }); // 先显示本地，避免白屏
+
+    // 尝试从云端拉取同一 pairCode 的订单
+    try {
+      const db = wx.cloud.database();
+      db.collection('orders')
+        .orderBy('createTimeTs', 'desc')
+        .get({
+          success: (res) => {
+            if (Array.isArray(res.data)) {
+              this.setData({ orders: res.data });
+              wx.setStorageSync('orders', res.data); // 回写本地，保持一致
+            }
+          },
+          fail: (err) => {
+            console.error('云端拉取失败', err);
+          }
+        });
+    } catch (e) {
+      console.error('云端未初始化或权限问题', e);
+    }
   },
 
   // 切换订单状态：pending <-> completed
