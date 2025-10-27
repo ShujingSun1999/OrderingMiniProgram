@@ -16,17 +16,17 @@
         <view class="food-name">{{item.name}}</view>
       </view>
       <view class="quantity-control">
-        <button 
+        <view 
           class="quantity-btn" 
           bindtap="decreaseQuantity" 
           data-id="{{item.id}}"
-        >-</button>
+        >-</view>
         <view class="quantity">{{item.quantity}}</view>
-        <button 
+        <view 
           class="quantity-btn" 
           bindtap="increaseQuantity" 
           data-id="{{item.id}}"
-        >+</button>
+        >+</view>
       </view>
     </view>
   </view>

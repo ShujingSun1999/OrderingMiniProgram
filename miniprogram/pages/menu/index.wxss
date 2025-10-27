@@ -111,19 +111,33 @@
 
 .food-action {
   margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .add-btn {
   width: 80rpx;
   height: 80rpx;
+  min-width: 80rpx;
+  min-height: 80rpx;
   border-radius: 50%;
   background-color: #ff6b6b;
   color: white;
   font-size: 36rpx;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 80rpx;
+  text-align: center;
+  display: inline-block;
   border: none;
   padding: 0;
+  flex: 0 0 80rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 去除小程序 button 默认点击边框效果，保持纯圆形 */
+.add-btn::after {
+  border: none;
 }

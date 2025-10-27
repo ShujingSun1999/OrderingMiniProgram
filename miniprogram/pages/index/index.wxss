@@ -1,21 +1,20 @@
 /* pages/index/index.wxss */
 .container {
-  padding: 40rpx;
-  background-color: #f8f9fa;
+  padding: 32rpx;
+  background-color: #f7f8fa;
   min-height: 100vh;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 60rpx;
-  padding: 40rpx 0;
+  margin-bottom: 32rpx;
 }
 
 .title {
   font-size: 42rpx;
   font-weight: bold;
   color: #ff6b6b;
-  margin-bottom: 16r极速赛车开奖结果历史记录px;
+  margin-bottom: 16rpx;
 }
 
 .subtitle {
@@ -26,16 +25,16 @@
 .menu-card {
   display: flex;
   align-items: center;
-  background-color: white;
-  border-radius: 20rpx;
-  padding: 30rpx;
-  margin-bottom: 20rpx;
-  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
 }
 
 .menu-icon {
-  width: 60rpx;
-  height: 60rpx;
+  width: 56rpx;
+  height: 56rpx;
   margin-right: 20rpx;
 }
 
@@ -45,17 +44,26 @@
 
 .menu-title {
   font-size: 32rpx;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 8rpx;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6rpx;
 }
 
 .menu-desc {
   font-size: 24rpx;
-  color: #999;
+  color: #8a8f98;
 }
 
 .arrow-icon {
   width: 24rpx;
   height: 24rpx;
+}
+
+/* 顶部横幅图片样式 */
+.top-banner {
+  width: 100%;
+  display: block;
+  border-radius: 16rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
 }

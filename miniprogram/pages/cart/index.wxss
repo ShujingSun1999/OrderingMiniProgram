@@ -54,6 +54,7 @@
   display: flex;
   align-items: center;
   gap: 20rpx;
+  flex-shrink: 0;
 }
 
 .quantity-btn {
@@ -64,11 +65,8 @@
   color: #666;
   font-size: 28rpx;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  padding: 0;
+  line-height: 60rpx;
+  text-align: center;
 }
 
 .quantity {
