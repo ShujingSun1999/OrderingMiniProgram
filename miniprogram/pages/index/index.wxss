@@ -30,16 +30,25 @@
   padding: 24rpx;
   margin-bottom: 16rpx;
   box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.06);
+  min-height: 120rpx; /* 统一卡片高度 */
+  width: 100%;
+  box-sizing: border-box; /* 统一计算方式，确保等宽 */
 }
 
 .menu-icon {
   width: 56rpx;
   height: 56rpx;
   margin-right: 20rpx;
+  flex: 0 0 56rpx;
+  display: block;
 }
 
 .menu-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 文案垂直居中 */
+  min-width: 0; /* 允许文字正确省略，不撑宽 */
 }
 
 .menu-title {
@@ -47,16 +56,24 @@
   font-weight: 600;
   color: #222;
   margin-bottom: 6rpx;
+  line-height: 1.2;
 }
 
 .menu-desc {
   font-size: 24rpx;
   color: #8a8f98;
+  line-height: 1.2;
+  white-space: nowrap; /* 单行展示，避免高度不一致 */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .arrow-icon {
   width: 24rpx;
   height: 24rpx;
+  flex: 0 0 24rpx;
+  display: block;
+  margin-left: 12rpx;
 }
 
 /* 顶部横幅图片样式 */
