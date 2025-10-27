@@ -12,22 +12,22 @@ Page({
     defaultFoods: [
       {
         id: 1,
-        name: '红烧牛肉面',
-        description: '香浓牛肉汤底，面条劲道',
+        name: '番茄鸡蛋打卤面',
+        description: '番茄鸡蛋加上黑木耳，面条劲道',
         image: '../../images/default-goods-image.png',
         category: 'main'
       },
       {
         id: 2,
-        name: '麻辣香锅',
-        description: '多种食材，麻辣鲜香',
+        name: '鸡汤',
+        description: '冷冷的冬天来一碗热热的鸡汤',
         image: '../../images/default-goods-image.png',
         category: 'main'
       },
       {
         id: 3,
-        name: '珍珠奶茶',
-        description: '香浓奶茶，Q弹珍珠',
+        name: '奶茶',
+        description: '无糖乌龙茶配上鲜奶',
         image: '../../images/default-goods-image.png',
         category: 'drink'
       },
@@ -47,8 +47,8 @@ Page({
       },
       {
         id: 6,
-        name: '炸鸡翅',
-        description: '外酥里嫩，香辣可口',
+        name: '炸鸡柳',
+        description: '外酥里嫩，就一个字香！',
         image: '../../images/default-goods-image.png',
         category: 'snack'
       }
