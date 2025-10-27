@@ -1,7 +1,7 @@
 <!--pages/menu/index.wxml-->
 <view class="container">
   <view class="header">
-    <view class="title">菜单</view>
+    <view class="title">囡囡的专属菜单</view>
     <view class="cart-icon" bindtap="goToCart">
       <image src="../../images/icons/goods-active.png" class="cart-img"></image>
       <view class="cart-badge" wx:if="{{cartCount > 0}}">{{cartCount}}</view>

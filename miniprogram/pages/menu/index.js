@@ -4,10 +4,10 @@ Page({
     categories: [
       { id: 'main', name: '主食' },
       { id: 'cook', name: '炒菜' },
-      { id: 'drink', name: '饮品' },
       { id: 'dessert', name: '甜点' },
       { id: 'snack', name: '小吃' },
       { id: 'breakfast', name: '早餐' },
+      { id: 'drink', name: '饮品' },
       { id: 'all', name: '全部' }
     ],
     currentCategory: 'all',
@@ -23,7 +23,7 @@ Page({
         id: 2,
         name: '鸡汤',
         description: '冷冷的冬天来一碗热热的鸡汤',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/鸡汤.png',
         category: 'main'
       },
       {
@@ -53,6 +53,13 @@ Page({
         description: '外酥里嫩，就一个字香！',
         image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
         category: 'snack'
+      },
+      {
+        id: 7,
+        name: '牛排',
+        description: 'T骨优先！没有就选肉眼哦',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        category: '主食'
       }
     ],
     foods: [],

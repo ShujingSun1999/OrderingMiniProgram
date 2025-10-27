@@ -7,19 +7,25 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;       /* 标题水平居中 */
   margin-bottom: 30rpx;
+  position: relative;            /* 让购物车按钮进行绝对定位 */
+  padding-right: 80rpx;          /* 预留空间避免标题与按钮重叠 */
 }
 
 .title {
   font-size: 36rpx;
   font-weight: bold;
   color: #333;
+  text-align: center;
 }
 
 .cart-icon {
-  position: relative;
+  position: absolute;            /* 固定到右侧，保留安全间距 */
+  right: calc((100vw - 100%) / -2 + 40rpx); /* 购物车距离屏幕右侧 x rpx */
+  top: 50%;
+  transform: translateY(-50%);
   width: 60rpx;
   height: 60rpx;
 }
