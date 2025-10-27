@@ -50,6 +50,9 @@ Page({
     
     shareText += `----------------\n`;
     shareText += `下单时间: ${order.createTime}\n`;
+    if (order.remark) {
+      shareText += `备注: ${order.remark}\n`;
+    }
     
     const modalContent = shareText.replace(/\n/g, '\r\n'); // 兼容不同平台换行
     wx.showModal({

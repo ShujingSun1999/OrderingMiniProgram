@@ -2,7 +2,8 @@
 Page({
   data: {
     cart: [],
-    totalItems: 0
+    totalItems: 0,
+    remark: ''
   },
 
   onLoad() {
@@ -16,10 +17,19 @@ Page({
   // 加载购物车
   loadCart() {
     const cart = wx.getStorageSync('cart') || [];
+    const remark = wx.getStorageSync('cartRemark') || '';
     this.setData({
       cart: cart,
-      totalItems: cart.reduce((total, item) => total + item.quantity, 0)
+      totalItems: cart.reduce((total, item) => total + item.quantity, 0),
+      remark
     });
+  },
+
+  // 备注输入
+  onRemarkInput(e) {
+    const value = e.detail.value;
+    this.setData({ remark: value });
+    wx.setStorageSync('cartRemark', value);
   },
 
   // 增加数量
@@ -79,18 +89,21 @@ Page({
       seq: nextId, // 序号从1开始
       items: this.data.cart,
       status: 'pending',
-      createTime: new Date().toLocaleString()
+      createTime: new Date().toLocaleString(),
+      remark: this.data.remark || ''
     };
     
     // 保存订单
     orders.unshift(order);
     wx.setStorageSync('orders', orders);
     
-    // 清空购物车
+    // 清空购物车与备注
     wx.setStorageSync('cart', []);
+    wx.setStorageSync('cartRemark', '');
     this.setData({
       cart: [],
-      totalItems: 0
+      totalItems: 0,
+      remark: ''
     });
     
     wx.showToast({

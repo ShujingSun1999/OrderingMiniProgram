@@ -23,6 +23,21 @@
   gap: 20rpx;
 }
 
+.remark-section {
+  margin-top: 60rpx; /* 与最后一个菜留更明显的间距 */
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.remark-title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 12rpx;
+  font-weight: 600;
+}
+
 .cart-item {
   display: flex;
   align-items: center;
@@ -30,6 +45,11 @@
   border-radius: 20rpx;
   padding: 30rpx;
   box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  /* 与备注框一致：左右各 44rpx 安全间距的视口贴边 */
+  width: calc(100vw - 88rpx);
+  margin-left: calc((100vw - 100%) / -2 + 44rpx);
+  margin-right: calc((100vw - 100%) / -2 + 44rpx);
+  box-sizing: border-box;
 }
 
 .food-image {
@@ -113,23 +133,47 @@
   left: 0;
   right: 0;
   background-color: white;
-  padding: 30rpx 40rpx;
+  padding: 20rpx 16rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.1);
+  gap: 12rpx;
 }
 
 .total-items {
   font-size: 28rpx;
   color: #666;
+  margin-left: 16rpx; /* 往右一点 */
 }
 
 .checkout-btn {
   background-color: #ff6b6b;
   color: white;
   border-radius: 50rpx;
-  padding: 20rpx 40rpx;
+  padding: 18rpx 28rpx;
   font-size: 28rpx;
   border: none;
+  margin-right: 16rpx; /* 按钮整体向右一些 */
+}
+
+.remark-input, .remark-textarea {
+  width: 100%;
+  background-color: #f7f7f7;
+  border: 2rpx solid #eee;
+  border-radius: 12rpx;
+  padding: 14rpx 16rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.remark-textarea {
+  min-height: 200rpx; /* 固定较大高度 */
+  height: 200rpx;
+  max-height: 200rpx;
+  /* 备注框的间距视口贴边但保留左右各 16rpx 安全间距 */
+  width: calc(100vw - 160rpx);
+  margin-left: calc((100vw - 100%) / -2 + 80rpx);
+  margin-right: calc((100vw - 100%) / -2 + 80rpx);
+  box-sizing: border-box;
 }

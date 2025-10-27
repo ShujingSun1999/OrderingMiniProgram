@@ -30,6 +30,19 @@
       </view>
     </view>
   </view>
+
+  <!-- 备注区域（独立卡片） -->
+  <view class="remark-section" wx:if="{{cart.length > 0}}">
+    <view class="remark-title">备注</view>
+    <textarea 
+      class="remark-textarea" 
+      placeholder="给孙老师的备注（口味、忌口等）" 
+      value="{{remark}}" 
+      bindinput="onRemarkInput" 
+      maxlength="120"
+      show-confirm-bar="false"
+    ></textarea>
+  </view>
   
   <!-- 空购物车提示 -->
   <view class="empty-cart" wx:if="{{cart.length === 0}}">

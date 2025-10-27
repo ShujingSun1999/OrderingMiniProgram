@@ -22,6 +22,7 @@
       </view>
       
       <view class="order-time">下单时间: {{item.createTime}}</view>
+      <view class="order-remark" wx:if="{{item.remark}}">备注：{{item.remark}}</view>
       
       <!-- 订单商品 -->
       <view class="order-items">
