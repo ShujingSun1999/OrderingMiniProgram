@@ -23,11 +23,11 @@
 
 .cart-icon {
   position: absolute;            /* 固定到右侧，保留安全间距 */
-  right: calc((100vw - 100%) / -2 + 40rpx); /* 购物车距离屏幕右侧 x rpx */
+  right: calc((100vw - 100%) / -2 + 24rpx); /* 图标更大时，给 24rpx 缓冲 */
   top: 50%;
   transform: translateY(-50%);
-  width: 60rpx;
-  height: 60rpx;
+  width: 82rpx;   /* 放大图标容器 */
+  height: 82rpx;
 }
 
 .cart-img {
@@ -37,8 +37,8 @@
 
 .cart-badge {
   position: absolute;
-  top: -10rpx;
-  right: -10rpx;
+  top: 2rpx;       /* 放入容器内，避免裁切 */
+  right: 2rpx;     /* 放入容器内，避免裁切 */
   background-color: #ff4444;
   color: white;
   border-radius: 50%;
@@ -48,6 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .category-scroll {

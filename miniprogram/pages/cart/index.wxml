@@ -1,7 +1,7 @@
 <!--pages/cart/index.wxml-->
 <view class="container">
   <view class="header">
-    <view class="title">购物车</view>
+    <view class="title">今天吃什么😋</view>
   </view>
   
   <!-- 购物车商品列表 -->
@@ -34,15 +34,15 @@
   <!-- 空购物车提示 -->
   <view class="empty-cart" wx:if="{{cart.length === 0}}">
     <image src="../../images/icons/goods.png" class="empty-icon"></image>
-    <view class="empty-text">购物车空空如也</view>
+    <view class="empty-text">肚子空空的...</view>
     <button class="go-menu-btn" bindtap="goToMenu">去点餐</button>
   </view>
   
   <!-- 结算栏 -->
   <view class="checkout-bar" wx:if="{{cart.length > 0}}">
     <view class="total-items">
-      共 {{totalItems}} 件商品
+      共 {{totalItems}} 件美味
     </view>
-    <button class="checkout-btn" bindtap="checkout">立即结算</button>
+    <button class="checkout-btn" bindtap="checkout">交给孙老师🍽</button>
   </view>
 </view>

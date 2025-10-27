@@ -92,7 +92,7 @@ Page({
     });
     
     wx.showToast({
-      title: '下单成功',
+      title: '下单成功！',
       icon: 'success',
       duration: 1500
     });

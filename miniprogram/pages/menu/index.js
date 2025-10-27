@@ -4,13 +4,14 @@ Page({
     categories: [
       { id: 'main', name: '主食' },
       { id: 'cook', name: '炒菜' },
-      { id: 'dessert', name: '甜点' },
+      { id: 'soup', name: '汤' },
       { id: 'snack', name: '小吃' },
       { id: 'breakfast', name: '早餐' },
+      { id: 'dessert', name: '甜点' },
       { id: 'drink', name: '饮品' },
       { id: 'all', name: '全部' }
     ],
-    currentCategory: 'all',
+    currentCategory: 'main',
     defaultFoods: [
       {
         id: 1,
@@ -24,13 +25,13 @@ Page({
         name: '鸡汤',
         description: '冷冷的冬天来一碗热热的鸡汤',
         image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/鸡汤.png',
-        category: 'main'
+        category: 'soup'
       },
       {
         id: 3,
         name: '奶茶',
         description: '无糖乌龙茶配上鲜奶',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/奶茶.png',
         category: 'drink'
       },
       {
@@ -51,15 +52,36 @@ Page({
         id: 6,
         name: '炸鸡柳',
         description: '外酥里嫩，就一个字香！',
-        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/炸鸡柳.png',
         category: 'snack'
       },
       {
         id: 7,
         name: '牛排',
         description: 'T骨优先！没有就选肉眼哦',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/牛排.png',
+        category: 'main'
+      },
+      {
+        id: 8,
+        name: '咖喱鸡排饭',
+        description: '搭配红薯和蘑菇的特制咖喱饭',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/咖喱鸡排饭.png',
+        category: 'main'
+      },
+      {
+        id: 9,
+        name: '螺狮粉',
+        description: '臭臭特制螺蛳粉',
+        image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/螺蛳粉.png',
+        category: 'main'
+      },
+      {
+        id: 10,
+        name: '避风塘虾',
+        description: '阿根廷红虾配上蒜香的面包糠，甜甜咸咸美滋味',
         image: 'cloud://cloud1-7g986hb4f0e18df6.636c-cloud1-7g986hb4f0e18df6-1384394849/foods/default-goods-image.png',
-        category: '主食'
+        category: 'cook'
       }
     ],
     foods: [],
@@ -79,6 +101,8 @@ Page({
     // 页面显示时重新加载菜品，确保自定义菜品实时更新
     this.loadFoods();
     this.filterFoods(this.data.currentCategory);
+    // 从本地存储同步购物车数量，避免返回菜单后角标未更新
+    this.loadCart();
   },
 
   // 加载菜品数据（合并默认和自定义）
