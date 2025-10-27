@@ -1,0 +1,221 @@
+/* pages/food-manage/index.wxss */
+/* 添加可爱字体样式 */
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+.container {
+  padding: 20rpx;
+  background-color: #fff5f5;
+  min-height: 100vh;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.header {
+  margin-bottom: 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ff6b8b;
+  text-align: center;
+  text-shadow: 2rpx 2rpx 4rpx rgba(255, 107, 139, 0.2);
+}
+
+.add-form {
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 8rpx 30rpx rgba(255, 107, 139, 0.15);
+  border: 2rpx solid #ffe6eb;
+}
+
+.form-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ff6b8b;
+  margin-bottom: 25rpx;
+  text-align: center;
+  text-shadow: 2rpx 2rpx 4rpx rgba(255, 107, 139, 0.2);
+}
+
+.form-group {
+  margin-bottom: 25rpx;
+}
+
+.form-label {
+  font-size: 28rpx;
+  color: #ff6b8b;
+  margin-bottom: 12rpx;
+  font-weight: 500;
+}
+
+.form-input {
+  border: 2rpx solid #ffe6eb;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  background-color: #fffafb;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.form-picker {
+  border: 2rpx solid #ffe6eb;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  background-color: #fffafb;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.picker-value {
+  font-size: 28rpx;
+  color: #ff6b8b;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.image-upload {
+  border: 2rpx dashed #ffc2d1;
+  border-radius: 16rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffafb;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+  opacity: 0.5;
+}
+
+.upload-text {
+  font-size: 24rpx;
+  color: #ff6b8b;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #ff6b8b, #ff8fa3);
+  color: white;
+  border-radius: 50rpx;
+  padding: 25rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: none;
+  margin-top: 20rpx;
+  box-shadow: 0 4rpx 15rpx rgba(255, 107, 139, 0.3);
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.food-list {
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  box-shadow: 0 8rpx 30rpx rgba(255, 107, 139, 0.15);
+  border: 2rpx solid #ffe6eb;
+}
+
+.list-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ff6b8b;
+  margin-bottom: 25rpx;
+  text-shadow: 2rpx 2rpx 4rpx rgba(255, 107, 139, 0.2);
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0;
+  border-bottom: 2rpx solid #ffe6eb;
+}
+
+.food-item:last-child {
+  border-bottom: none;
+}
+
+.food-image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  margin-right: 25rpx;
+  border: 2rpx solid #ffe6eb;
+}
+
+.food-info {
+  flex: 1;
+}
+
+.food-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #ff6b8b;
+  margin-bottom: 8rpx;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.food-desc {
+  font-size: 24rpx;
+  color: #ff8fa3;
+  margin-bottom: 8rpx;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.food-category {
+  font-size: 22rpx;
+  color: #ff6b8b;
+  background-color: #ffe6eb;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  display: inline-block;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.delete-btn {
+  background-color: #ff8fa3;
+  color: white;
+  border-radius: 20rpx;
+  padding: 12rpx 20rpx;
+  font-size: 24rpx;
+  border: none;
+  box-shadow: 0 2rpx 10rpx rgba(255, 143, 163, 0.3);
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.empty-list {
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 60rpx 30rpx;
+  text-align: center;
+  box-shadow: 0 8rpx 30rpx rgba(255, 107, 139, 0.15);
+  border: 2rpx solid #ffe6eb;
+}
+
+.empty-icon {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 25rpx;
+  opacity: 0.5;
+}
+
+.empty-text {
+  font-size: 28rpx;
+  color: #ff8fa3;
+  font-family: 'Ma Shan Zheng', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}

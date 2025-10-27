@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="title">专属点餐系统</view>
+    <view class="subtitle">为女朋友定制的美食选择</view>
+  </view>
+  
+  <!-- 点餐功能入口 -->
+  <view class="menu-card" bindtap="goToMenu">
+    <image class="menu-icon" src="../../images/icons/goods-active.png"></image>
+    <view class="menu-content">
+      <view class="menu-title">开始点餐</view>
+      <view class="menu-desc">浏览美味菜品，为心爱的人选择美食</view>
+    </view>
+    <image class="arrow-icon" src="../../images/arrow.svg"></image>
+  </view>
+  
+  <!-- 订单入口 -->
+  <view class="menu-card" bindtap="goToOrders">
+    <image class="menu-icon" src="../../images/icons/business-active.png"></image>
+    <view class="menu-content">
+      <view class="menu-title">我的订单</view>
+      <view class="menu-desc">查看历史点餐记录</view>
+    </view>
+    <image class="arrow-icon" src="../../images/arrow.svg"></image>
+  </view>
+  
+  <!-- 菜品管理入口 -->
+  <view class="menu-card" bindtap="goToFoodManage">
+    <image class="menu-icon" src="../../images/icons/setting.svg"></image>
+    <view class="menu-content">
+      <view class="menu-title">菜品管理</view>
+      <view class="menu-desc">添加和管理自定义菜品</view>
+    </view>
+    <image class="arrow-icon" src="../../images/arrow.svg"></image>
+  </view>
+</view>
